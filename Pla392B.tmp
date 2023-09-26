@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://ck4k1oeqnew7m"]
+
+[ext_resource type="PackedScene" uid="uid://dd1qfcic5104r" path="res://house_col.tscn" id="1_nccah"]
+[ext_resource type="PackedScene" uid="uid://bufhtifpkhqa7" path="res://player_1.tscn" id="2_lurqa"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_mju4r"]
+
+[sub_resource type="Sky" id="Sky_7eq1i"]
+sky_material = SubResource("ProceduralSkyMaterial_mju4r")
+
+[sub_resource type="Environment" id="Environment_oh7xf"]
+background_mode = 2
+background_color = Color(0.235294, 0.184314, 0.0705882, 1)
+sky = SubResource("Sky_7eq1i")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="House" parent="." instance=ExtResource("1_nccah")]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.73849, 2.65, 2.37787)
+omni_range = 1.0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.58459, 2.65, 2.63655)
+omni_range = 1.0
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.58459, 2.65, -0.189063)
+omni_range = 1.0
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.58459, 2.65, -2.79579)
+omni_range = 1.0
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6987, 2.65, -2.79579)
+omni_range = 1.0
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6987, 2.65, -0.38805)
+omni_range = 1.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_oh7xf")
+
+[node name="Player" parent="." instance=ExtResource("2_lurqa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.646, 0, 3.069)
+movement_speed = 2.0

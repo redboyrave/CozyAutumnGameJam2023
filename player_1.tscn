@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://bufhtifpkhqa7"]
+
+[ext_resource type="Script" path="res://scripts/player_ctrl.gd" id="1_gmk2g"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ed5rp"]
+radius = 0.25
+height = 1.7
+
+[node name="Player" type="Node3D"]
+script = ExtResource("1_gmk2g")
+
+[node name="RigidBody3D" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85, 0)
+axis_lock_angular_x = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+shape = SubResource("CapsuleShape3D_ed5rp")
+
+[node name="Camera3D" type="Camera3D" parent="RigidBody3D"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.75, 0)
+fov = 110.0
+
+[node name="RayCast3D" type="RayCast3D" parent="RigidBody3D/Camera3D"]
+target_position = Vector3(0, 0, -5)

@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://c0edopyr7r05k"]
+
+[ext_resource type="ArrayMesh" uid="uid://b71undf1vw7ri" path="res://Meshes/House/House_Room_004.res" id="1_65kb2"]
+[ext_resource type="ArrayMesh" uid="uid://bpug1praolywo" path="res://Meshes/House/House_WIndow_Small.res" id="2_wlkk2"]
+[ext_resource type="ArrayMesh" uid="uid://0s0nlbjnmrdg" path="res://Meshes/House/House_WIndow_Small_001.res" id="3_hstnw"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_6e6cd"]
+data = PackedVector3Array(-1.65, 2.7, -0.9, 1.65, 2.7, 0.9, 1.65, 2.7, -0.9, -1.65, 2.7, -0.9, -1.65, 2.7, 0.9, 1.65, 2.7, 0.9, 1.65, 0, 0.9, -1.65, 2.7, 0.9, -1.65, 0, 0.9, 1.65, 0, 0.9, 1.65, 2.7, 0.9, -1.65, 2.7, 0.9, 1.65, 0, -0.9, 1.65, 1.85, 0.375, 1.65, 0, 0.9, 1.65, 0, -0.9, 1.65, 1.85, -0.375, 1.65, 1.85, 0.375, 1.65, 0, 0.9, -1.65, 0, -0.9, 1.65, 0, -0.9, 1.65, 0, 0.9, -1.65, 0, -0.225, -1.65, 0, -0.9, -1.65, 0, 0.825, 1.65, 0, 0.9, -1.65, 0, 0.9, -1.65, 0, -0.225, 1.65, 0, 0.9, -1.65, 0, 0.825, -1.65, 0, -0.9, 1.65, 2.7, -0.9, 1.65, 0, -0.9, -1.65, 0, -0.9, -1.65, 2.7, -0.9, 1.65, 2.7, -0.9, 1.65, 0, 0.9, 1.65, 2.1, 0.375, 1.65, 2.7, 0.9, 1.65, 0, 0.9, 1.65, 1.85, 0.375, 1.65, 2.1, 0.375, -1.65, 0, -0.9, -1.65, 2.1, -0.225, -1.65, 2.7, -0.9, -1.65, 0, -0.9, -1.65, 0, -0.225, -1.65, 2.1, -0.225, -1.65, 2.7, -0.9, -1.65, 2.1, 0.825, -1.65, 2.7, 0.9, -1.65, 2.7, -0.9, -1.65, 2.1, -0.225, -1.65, 2.1, 0.825, -1.65, 2.7, 0.9, -1.65, 0, 0.825, -1.65, 0, 0.9, -1.65, 2.7, 0.9, -1.65, 2.1, 0.825, -1.65, 0, 0.825, 1.65, 2.7, -0.9, 1.65, 2.1, 0.375, 1.65, 2.1, -0.375, 1.65, 2.7, -0.9, 1.65, 2.7, 0.9, 1.65, 2.1, 0.375, 1.65, 2.7, -0.9, 1.65, 1.85, -0.375, 1.65, 0, -0.9, 1.65, 2.7, -0.9, 1.65, 2.1, -0.375, 1.65, 1.85, -0.375)
+
+[node name="Bathroom" type="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.16708, 0, -0.752559)
+mesh = ExtResource("1_65kb2")
+skeleton = NodePath("")
+
+[node name="WIndow_Small" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.70125, 1.97498, 0)
+mesh = ExtResource("2_wlkk2")
+skeleton = NodePath("")
+
+[node name="WIndow_Small_001" type="MeshInstance3D" parent="WIndow_Small"]
+transform = Transform3D(0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 0, 0, 1, 0.0762506, 0.0500219, 0)
+mesh = ExtResource("3_hstnw")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_6e6cd")

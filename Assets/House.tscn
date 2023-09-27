@@ -1,0 +1,25 @@
+[gd_scene load_steps=8 format=3 uid="uid://iuberxadlja2"]
+
+[ext_resource type="PackedScene" uid="uid://c6do076kmlr0h" path="res://Assets/House/Rooms/LivingRoom.tscn" id="1_38gcb"]
+[ext_resource type="PackedScene" uid="uid://x4dk3spexvyp" path="res://Assets/House/Rooms/Corridor.tscn" id="2_qigot"]
+[ext_resource type="PackedScene" uid="uid://b7ym0nesg7awe" path="res://Assets/House/Rooms/Kitchen.tscn" id="3_epouk"]
+[ext_resource type="PackedScene" uid="uid://c0edopyr7r05k" path="res://Assets/House/Rooms/Bathroom.tscn" id="4_xan4j"]
+[ext_resource type="PackedScene" uid="uid://cx1dsnvl0f2qw" path="res://Assets/House/Rooms/FrontRoom.tscn" id="5_vnstw"]
+[ext_resource type="PackedScene" uid="uid://b1fsak8lb75j7" path="res://Assets/House/Rooms/MiddleRoom.tscn" id="6_six7u"]
+[ext_resource type="PackedScene" uid="uid://ddb2oij0ntnk6" path="res://Assets/House/Rooms/BackRoom.tscn" id="7_lybsx"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="LivingRoom" parent="." instance=ExtResource("1_38gcb")]
+
+[node name="Corridor" parent="." instance=ExtResource("2_qigot")]
+
+[node name="Kitchen" parent="." instance=ExtResource("3_epouk")]
+
+[node name="Bathroom" parent="." instance=ExtResource("4_xan4j")]
+
+[node name="FrontRoom" parent="." instance=ExtResource("5_vnstw")]
+
+[node name="MiddleRoom" parent="." instance=ExtResource("6_six7u")]
+
+[node name="BackRoom" parent="." instance=ExtResource("7_lybsx")]

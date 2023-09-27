@@ -20,5 +20,4 @@ func _process(delta):
 	pass
 
 func interact():
-	#functionality for picking up the item.
-	pass
+	print("interact")

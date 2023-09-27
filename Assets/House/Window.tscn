@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddxcakm6mfllv"]
+
+[ext_resource type="ArrayMesh" uid="uid://delu2obkooy78" path="res://Meshes/House/House_Window.res" id="1_axsgy"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ys80r"]
+size = Vector3(1.7, 1.2, 0.2)
+
+[node name="Window" type="MeshInstance3D"]
+mesh = ExtResource("1_axsgy")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_ys80r")

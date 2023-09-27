@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://dffgo1bujnypa"]
+
+[ext_resource type="ArrayMesh" uid="uid://bqsbilasakjt0" path="res://Meshes/House/House_Door_Frama_Big.res" id="1_iibnj"]
+[ext_resource type="ArrayMesh" uid="uid://s2xn5y2cy10d" path="res://Meshes/House/House_Door_big.res" id="2_17ajf"]
+[ext_resource type="ArrayMesh" uid="uid://bc4ms4tqtxctm" path="res://Meshes/House/House_Door_Knob_002.res" id="3_u65eb"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_t6su4"]
+data = PackedVector3Array(-0.0925, 2.1, -0.6375, 0.0925, 0, -0.6375, 0.0925, 2.1, -0.6375, -0.0925, 2.1, -0.6375, -0.0925, 0, -0.6375, 0.0925, 0, -0.6375, 0.0925, 0, -0.6375, -0.0925, 0, 0.6375, 0.0925, 0, 0.6375, 0.0925, 0, -0.6375, -0.0925, 0, -0.6375, -0.0925, 0, 0.6375, 0.0925, 2.1, 0.6375, -0.0925, 2.1, -0.6375, 0.0925, 2.1, -0.6375, 0.0925, 2.1, 0.6375, -0.0925, 2.1, 0.6375, -0.0925, 2.1, -0.6375, -0.0925, 0, 0.6375, 0.0925, 2.1, 0.6375, 0.0925, 0, 0.6375, -0.0925, 0, 0.6375, -0.0925, 2.1, 0.6375, 0.0925, 2.1, 0.6375, 0.0925, 0, 0.6375, 0.0925, 2.1, -0.6375, 0.0925, 0, -0.6375, 0.0925, 0, 0.6375, 0.0925, 2.1, 0.6375, 0.0925, 2.1, -0.6375)
+
+[node name="BigDoor" type="MeshInstance3D"]
+mesh = ExtResource("1_iibnj")
+skeleton = NodePath("")
+
+[node name="Door_001" type="MeshInstance3D" parent="."]
+mesh = ExtResource("2_17ajf")
+skeleton = NodePath("")
+
+[node name="Door_Knob_006" type="MeshInstance3D" parent="Door_001"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)
+mesh = ExtResource("3_u65eb")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Door_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Door_001/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_t6su4")

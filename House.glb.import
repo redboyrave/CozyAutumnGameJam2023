@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b1or2jvact8cr"
+uid="uid://dnimdmma4ibwo"
 path="res://.godot/imported/House.glb-415530e6538981bab9ac2a35f0df4544.scn"
 
 [deps]
@@ -18,7 +18,7 @@ nodes/root_name="Scene Root"
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
 meshes/ensure_tangents=true
-meshes/generate_lods=true
+meshes/generate_lods=false
 meshes/create_shadow_meshes=true
 meshes/light_baking=1
 meshes/lightmap_texel_size=0.2
@@ -26,9 +26,15 @@ skins/use_named_skins=true
 animation/import=false
 animation/fps=30
 animation/trimming=false
-animation/remove_immutable_tracks=false
+animation/remove_immutable_tracks=true
 import_script/path=""
 _subresources={
+"materials": {
+"Rooms": {
+"use_external/enabled": true,
+"use_external/path": "res://Material/house_mat.material"
+}
+},
 "meshes": {
 "House_Door_Frama_Big": {
 "generate/lightmap_uv": 0,
@@ -49,6 +55,26 @@ _subresources={
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
 "save_to_file/path": "res://Meshes/House/House_Door_Frama_Small.res"
+},
+"House_Door_Knob": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://Meshes/House/House_Door_Knob.res"
+},
+"House_Door_Knob_002": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://Meshes/House/House_Door_Knob_002.res"
 },
 "House_Door_big": {
 "generate/lightmap_uv": 0,

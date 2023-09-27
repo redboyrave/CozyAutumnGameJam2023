@@ -8,6 +8,7 @@ height = 1.7
 
 [node name="Player" type="Node3D"]
 script = ExtResource("1_gmk2g")
+movement_speed = 2.0
 
 [node name="RigidBody3D" type="CharacterBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85, 0)
